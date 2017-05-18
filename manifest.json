@@ -1,6 +1,6 @@
 {
-  "name": "Polymer 2.0 test",
-  "short_name": "Polymer 2.0 test",
+  "name": "Hour tracker",
+  "short_name": "Hour tracker",
   "start_url": "/",
   "display": "standalone"
 }

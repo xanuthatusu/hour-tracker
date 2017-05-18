@@ -1,7 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../poly-second/poly-second.html">
 
-<dom-module id="poly-main">
+<dom-module id="ht-app">
   <template>
     <style>
       :host {
@@ -9,7 +8,6 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
-    <poly-second input='[[prop1]]'></poly-second>
   </template>
 
   <script>
@@ -17,18 +15,18 @@
      * @customElement
      * @polymer
      */
-    class PolyMain extends Polymer.Element {
-      static get is() { return 'poly-main'; }
+    class HtApp extends Polymer.Element {
+      static get is() { return 'ht-app'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'poly-main'
+            value: 'ht-app'
           }
         };
       }
     }
 
-    window.customElements.define(PolyMain.is, PolyMain);
+    window.customElements.define(HtApp.is, HtApp);
   </script>
 </dom-module>
