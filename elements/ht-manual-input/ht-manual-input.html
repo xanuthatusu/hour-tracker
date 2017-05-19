@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<dom-module id="ht-manual-input">
+  <template>
+    <style>
+    </style>
+
+    <paper-input error-message="Please enter a valid number" label="Hours worked"
+      auto-validate allowed-pattern="[0-9]" value="{{hours}}"></paper-input>
+    <paper-button on-tap="submitHours">Submit</paper-button>
+  </template>
+
+  <script>
+    class HtManualInput extends Polymer.Element {
+      static get is() { return 'ht-manual-input'; }
+      static get properties() {
+        return {
+          hours: {
+            type: Number
+          }
+        };
+      }
+
+      submitHours () {
+        console.log(this.hours);
+      }
+    }
+
+    window.customElements.define(HtManualInput.is, HtManualInput);
+  </script>
+</dom-module>
